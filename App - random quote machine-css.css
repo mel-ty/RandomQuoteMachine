@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+
+:root {
+  --canary: #FFF689;
+  --powder-blue: #BBE5ED;
+  --dark-green: #041B15;
+}
+ 
+
+/**
+16px - 100%
+20px - 125%
+**/
+html {
+  font-size: 125%;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--canary);
+  font-family: 'Hubballi', cursive;
+  color: var(--dark-green);
+}
+#quote-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: inherit;
+  }
+#quote-box p {
+  color: inherit;
+  width: 70%;
+}
+#text {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-left: 0.3rem;
+  border-left: var(--dark-green) 0.4rem solid;
+}
+.text-animation-off {
+  animation: none;
+}
+
+.text-animation-on {
+    background-image: linear-gradient(to right, var(--animation-color) 50%, var(--canary) 0);
+    animation: slide 2s ease-in-out forwards;
+    transition: background-position 1s;
+    background-size: 200% 200%;
+}
+
+@keyframes slide {
+  from {
+    background-position: right;
+  }
+  to {
+    background-position: left;
+  } 
+}
+#author {
+  font-size: 1.5rem;
+  text-align: right;
+  margin: 0.5rem 0 2rem;
+}
+
+
+/*Send tweet and new-quote*/
+#buttons {
+  display: flex;
+  align-items: flex-end;
+  column-gap: 2.5rem;
+}
+#quote-box a {
+  padding: 0;
+}
+img {
+  padding: 0;
+  width: 1.5rem;
+}
+#new-quote {
+  display: inline;
+  padding: 0.5rem;
+  font-family: inherit;
+  color: inherit;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+/*List of references*/
+#bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+#references {
+  position: absolute;
+  bottom: 0.7rem;
+  padding: 5px;
+  border: none;
+
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  
+  transition: all 0.5s ease;
+}
+.references-off {
+  color: inherit;
+  background-color: var(--canary);
+}
+.references-on {
+  color: var(--canary);
+  background-color: var(--dark-green);
+}
+
+#footer {
+  background-color: var(--dark-green);
+  position: absolute;
+  width: 25%;
+  left: 75%;
+  bottom: 0;
+  top: 0;
+} 
+
+#footer a {
+  text-decoration: none;
+  color: var(--canary);
+}
+
+#footer ul {
+  list-style: none;
+}
+
+ul li {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    padding-left: 10px;
+    border-left: 5px solid var(--canary);
+}
+
+.footer-on {
+  transform: none;
+  transition: transform 0.3s ease-in;
+}
+
+.footer-off {
+  transform: translateX(200%);
+  transition: transform 0.3s ease-in;
+}
+
+@media (max-width: 650px) {
+  html {
+    font-size: 100%;
+  }
+}
+@media (max-width: 360px) {
+  html {
+    font-size: 90%;
+  }
+  #footer {
+    width: 35%;
+  
+  }
+  #footer ul li {
+    border-left: 2px solid var(--canary);
+    }
+}
