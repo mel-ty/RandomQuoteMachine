@@ -35,8 +35,10 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
+  height: calc(100vh*0.4);
   color: inherit;
-  }
+}
 #quote-box p {
   color: inherit;
   width: 70%;
