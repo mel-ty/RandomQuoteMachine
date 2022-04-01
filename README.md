@@ -1,2 +1,2 @@
 # RandomQuoteMachine
-Made for FCC Front-end libraries certification
+Made for freeCodeCamp Front-end libraries certification
